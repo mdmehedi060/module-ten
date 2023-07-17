@@ -14,7 +14,7 @@
   text-overflow: ellipsis;
   /* text-overflow: clip; */
 }
-
+/* Explore Transform and Translate */
 .container, .inner{
   width: 200px;
   height: 200px;
@@ -38,6 +38,8 @@
  .dojjal-bou{
   margin-left: 50px;
  }
+/* Transform,Translate,Transition */
+
  .box-trans{
   width: 100px;
   height: 100px;
@@ -50,4 +52,53 @@
   transform: rotate(45deg) scale(1.5) translateX(150px);
   /* width: 400px;
   background-color: red; */
+ }
+ /* Explore Animation */
+
+@keyframes ping-pong {
+  from{
+  left: 0;
+}
+to{
+  left: 400px;
+  background-color: red;
+}
+}  
+@keyframes bounce {
+  0%{
+top: 0;
+left: 0;
+  }
+  25%{
+    left: 150px;
+    top: 200px;
+    background-color: red;
+  }
+  50%{
+left: 300px;
+    top: 0px;
+    background-color: blue;
+  }
+  100%{
+left: 400px;
+    top: 200px;
+    background-color: burlywood;
+  }
+}
+
+ .stage{
+  width: 500px;
+  height: 300px;
+  border: 2px solid steelblue;
+  background-color: aqua;
+ }
+ .ball{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: yellow;
+  position: relative;
+  /* animation: ping-pong 2s ease-in-out 1s infinite alternate; */
+  /* animation: ping-pong 2s ease-in-out 1s 3 alternate ; */
+  animation: bounce 2s ease-in-out 3s infinite alternate;
  }
